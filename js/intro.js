@@ -1,5 +1,5 @@
 function typing() {
-    const text = ["Hi, I'm Ryan 👋", "Aspiring Engineer 💻", "Big Eater 🍜"];
+    const text = ["Hi, I'm Ryan!", "Aspiring Engineer", "Big Eater"];
     const fact = document.querySelector("#intro");
     let i = 0;
     let j = 0;
@@ -13,9 +13,9 @@ function typing() {
             fact.textContent += current.charAt(j++);
             setTimeout(type, 80);
         } else if (isDeleting && j > 0) {
-        // deleting backward
-        fact.textContent = current.substring(0, --j);
-        setTimeout(type, 40);
+            // deleting backward
+            fact.textContent = current.substring(0, --j) || "\u00A0";
+            setTimeout(type, 40);
         } else {
         // pause at end or start
         if (!isDeleting && j === current.length) {

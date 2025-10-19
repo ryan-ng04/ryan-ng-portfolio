@@ -1,1 +1,181 @@
-* 
+* {
+    background-color: white;
+    box-sizing: border-box;
+    color: #494d5f;
+    /* max-width: 900px; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container p {
+    font-size: 13pt;
+}
+
+main {
+    flex: 1;
+    /* grow and push footer down */
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #fff;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.navbar h2 {
+    margin: 0;
+    padding-left: 0rem;
+    font-size: 2rem;
+}
+
+.links a{
+    position: relative;
+    display: inline-block;
+    position: relative;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    /* move underline slightly below text baseline */
+    width: 100%;
+    height: 2px;
+    background-color: blue;
+    transform: scaleX(0);
+    /* start invisible */
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+/* show underline on hover */
+.links a:hover::after {
+    transform: scaleX(1);
+}
+
+/* body css */
+
+#intro {
+    display: inline-block;
+    min-width: 15ch;
+    white-space: nowrap;
+    text-align: left;
+}
+
+#about-me{
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+#about-me h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#about-me p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* fact btn */
+
+button{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+    font-size: 15px;
+    /* border: 3px black; */
+    border-width: 1.4px;
+    border-radius: 9px;
+   
+}
+
+#fact {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    /* hides content when closed */
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    margin: auto;
+    background-color: transparent;
+    /* optional: gives tab look */
+    padding: 0.75rem 1rem;
+}
+
+footer {
+    margin: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+
+}
+
+/* Links scale down slightly on mobile */
+@media (max-width: 768px) {
+  .links a {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+
+  .navbar h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Prevent moon button from overlapping */
+  .theme-btn {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+
+  /* Adjust margins so sections fit smaller screens */
+  #about-me, header {
+    padding: 0 1rem;
+  }
+}
+
+/* Tiny screen (like older phones) */
+@media (max-width: 768px) {
+    .links a {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .links a::after {
+        bottom: -2px;
+        /* re-anchor underline on smaller text */
+    }
+}
