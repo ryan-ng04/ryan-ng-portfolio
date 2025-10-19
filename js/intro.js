@@ -34,4 +34,3 @@ function typing() {
   
 
 
-document.addEventListener("DOMContentLoaded", typing);
