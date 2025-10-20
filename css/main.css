@@ -114,8 +114,9 @@ button{
     margin-top: 100px;
     font-size: 15px;
     /* border: 3px black; */
-    border-width: 1.4px;
+    border-width: 1.2px;
     border-radius: 9px;
+    border-color:whitesmoke
    
 }
 
