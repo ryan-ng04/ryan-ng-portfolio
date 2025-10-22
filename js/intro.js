@@ -1,5 +1,5 @@
 function typing() {
-    const text = ["Hi, I'm Ryan!", "Aspiring Engineer", "Big Eater"];
+    const text = ["Hi, I'm Ryan!", "Aspiring Software Engineer", "Lets Connect!"];
     const fact = document.querySelector("#intro");
     let i = 0;
     let j = 0;
